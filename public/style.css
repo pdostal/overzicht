@@ -1,2 +1,5 @@
 header { margin-bottom: 50px; }
 footer { margin-top: 50px; }
+
+.time_val { display: inline-block; width: 18em; }
+.time_desc { display: inline-block; width: 7.5em; }
