@@ -25,8 +25,9 @@ new cron '* * * * * *', () ->
   io.emit 'times', data
 , null, true
 
-http.listen 3000, ->
-  console.log moment.utc().format() + ' server started'
+port = process.env.PORT || 8000
+http.listen port, ->
+  console.log moment.utc().format() + ' server started on port ' + port
 
 io.on 'connection', (socket) ->
   console.log moment.utc().format() + ' client connected'
